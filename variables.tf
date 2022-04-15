@@ -12,3 +12,8 @@ variable "project" {
   description = "gcp project"
 }
 
+variable "GOOGLE_CREDENTIALS" {
+    description = "gcp credentials"
+}
+
+
