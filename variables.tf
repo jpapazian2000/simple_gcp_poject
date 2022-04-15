@@ -1,7 +1,7 @@
 variable "region" {
   description = "gcp region"
   default     = "europe-west1"
-}git a
+}
 
 variable "zone" {
   description = "gcp zone"
