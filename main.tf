@@ -8,10 +8,9 @@ terraform {
 }
 
 provider "google" {
-  
   project = var.project
   region  = var.region
-  #zone    = "us-central1-c"
+  zone    = var.zone
 }
 
 resource "google_compute_network" "vpc_network" {
@@ -25,6 +24,11 @@ resource "google_compute_instance" "vm_instance" {
     initialize_params {
       image = "debian-cloud/debian-9"
     }
+  }
+
+  labels = {
+    project = "new plane"
+    departement = "engineering"
   }
 
   network_interface {

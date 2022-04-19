@@ -5,7 +5,6 @@ variable "region" {
 
 variable "zone" {
   description = "gcp zone"
-  default     = "europe-west1-b"
 }
 
 variable "project" {
