@@ -27,7 +27,7 @@ resource "google_compute_instance" "vm_instance" {
   }
 
   labels = {
-    project = "new plane"
+    project = "new_plane"
     departement = "engineering"
   }
 
