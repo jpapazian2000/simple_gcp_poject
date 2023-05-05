@@ -23,11 +23,11 @@ variable "subnet_prefix" {}
 
 variable "machine_type" {}
 
-variable "ssh_keys" {}
+#variable "ssh_keys" {}
 
-variable "ssh_user" {
-    default = "jerome"
-}
+#variable "ssh_user" {
+  #  default = "jerome"
+#}
 variable "allowed_ip" {}
 
 
