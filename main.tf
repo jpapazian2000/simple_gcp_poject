@@ -38,6 +38,19 @@ resource "google_compute_firewall" "ssh_access" {
   source_tags = ["ssh-access"]
 }
 
+resource "google_compute_firewall" "http_access" {
+  name = "${var.prefix}-allow-http"
+  network = google_compute_network.vpc_network.self_link
+
+  allow {
+    protocol = "tcp"
+    ports = ["80"]
+  }
+
+  source_ranges = [var.allowed_ip]
+  source_tags = ["http"]
+}
+
 resource "google_compute_instance" "vm_instance" {
   name         = "terraform-instance"
   machine_type = var.machine_type
@@ -64,10 +77,10 @@ resource "google_compute_instance" "vm_instance" {
     access_config {
     }
   }
-  tags = ["ssh-access"]
-  metadata = {
-        sshKeys = "${var.ssh_user}:${var.ssh_keys}"
-    }
+  tags = ["ssh-access", "http"]
+  #metadata = {
+       # sshKeys = "${var.ssh_user}:${var.ssh_keys}"
+   # }
 }
 
 
