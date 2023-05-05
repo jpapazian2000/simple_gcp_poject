@@ -17,7 +17,7 @@ variable "project" {
 #variable "ttl" {}
 #variable "terraform" {}
 #variable "hc-internet-facing" {}
-#variable "prefix" {}
+variable "prefix" {}
 
 variable "subnet_prefix" {}
 
