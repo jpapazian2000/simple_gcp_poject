@@ -61,12 +61,12 @@ resource "google_compute_instance" "vm_instance" {
     }
   } 
   labels = {
-    owner = var.owner
-    se-region = var.se-region
-    purpose = var.purpose
-    ttl = var.ttl
-    terraform = var.terraform
-    hc-internet-facing = var.hc-internet-facing
+    #owner = var.owner
+    #se-region = var.se-region
+    #purpose = var.purpose
+    #ttl = var.ttl
+    #terraform = var.terraform
+    #hc-internet-facing = var.hc-internet-facing
     billing = "test"
     department = "dev"
   } 
