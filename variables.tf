@@ -11,13 +11,13 @@ variable "zone" {
 variable "project" {
   description = "gcp project"
 }
-variable "owner" { }
-variable "se-region" {}
-variable "purpose" {}
-variable "ttl" {}
-variable "terraform" {}
-variable "hc-internet-facing" {}
-variable "prefix" {}
+#variable "owner" { }
+#variable "se-region" {}
+#variable "purpose" {}
+#variable "ttl" {}
+#variable "terraform" {}
+#variable "hc-internet-facing" {}
+#variable "prefix" {}
 
 variable "subnet_prefix" {}
 
